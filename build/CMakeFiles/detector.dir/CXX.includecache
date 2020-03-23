@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+..//TIMER.h
+chrono
+-
+ostream
+-
+string
+-
+algorithm
+-
+
+/home/lut/Desktop/ubuntu_desk_C++/lineDetector/detect/LineDetector.cpp
+LineDetector.hpp
+/home/lut/Desktop/ubuntu_desk_C++/lineDetector/detect/LineDetector.hpp
+stdio.h
+-
+TIMER.h
+/home/lut/Desktop/ubuntu_desk_C++/lineDetector/detect/TIMER.h
+
+/home/lut/Desktop/ubuntu_desk_C++/lineDetector/detect/LineDetector.hpp
+vector
+-
+math.h
+-
+array
+-
+iostream
+-
+

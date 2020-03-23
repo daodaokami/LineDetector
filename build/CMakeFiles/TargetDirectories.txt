@@ -1,0 +1,4 @@
+/home/lut/Desktop/ubuntu_desk_C++/lineDetector/build/CMakeFiles/edit_cache.dir
+/home/lut/Desktop/ubuntu_desk_C++/lineDetector/build/CMakeFiles/detector.dir
+/home/lut/Desktop/ubuntu_desk_C++/lineDetector/build/CMakeFiles/rebuild_cache.dir
+/home/lut/Desktop/ubuntu_desk_C++/lineDetector/build/CMakeFiles/linedetector_test.dir
