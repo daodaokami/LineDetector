@@ -20,14 +20,14 @@ bool LineDetector::detector(const Points& points,
       sinLine sl(point);
       sinlines_.push_back(sl);
   }// O(n)
-  Threshold theta_threshold(-PI/2, 3*PI/2);
+  Threshold theta_threshold(0, 2*PI);
   Threshold r_threshold(mindis, maxdis);
   Points statistics_points;// in the (r,theta) coor
   // 在某一个参数范围内
   // 设置参数在某个参数范围内, theta 在[0,2pi], r[0,+∞]，delta_theta 2pi/30(角度上划分30份),
   // r的范围比较大，一般是按照像素大小来算为sqrt(w^2+h^2), 单位像素，可以隔10个像素一个块;
-  float delta_theta = PI/1000.f;
-  float delta_r = 5; //10px
+  float delta_theta = PI/100.f;
+  float delta_r = 10; //10px
   // 构造了2W的点需要去检索，花费的时间是多少
   // 创建统计块，并统计块内点的数量
   int rt_w = 0; int rt_h = 0;
@@ -48,8 +48,8 @@ bool LineDetector::detector(const Points& points,
       for(float theta=theta_threshold.min_; theta_threshold.isInter(theta); theta+= delta_theta){
           float r = line.getRRange(theta);
           int counter_rt_hi = std::ceil(r_threshold.max_-r)/delta_r;
-          std::cout<<counter_rt_hi<<", "<<rt_w<<", "<<counter_rt_wi<<std::endl;
-          rt_rect[counter_rt_hi*rt_w+counter_rt_wi] = 255;
+        //   std::cout<<counter_rt_hi<<", "<<rt_w<<", "<<counter_rt_wi<<std::endl;
+          rt_rect[counter_rt_hi*rt_w+counter_rt_wi] += 1;
           counter_rt_wi ++;
       }
     //   需要选择一些点绘制出来

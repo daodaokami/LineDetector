@@ -52,8 +52,8 @@ int main(int argc, char* argv[]){
 			}
 		}
 	}
-	pxes.clear();
-	pxes.push_back(lut_detector::Point(500,500));
+	// pxes.clear();
+	// pxes.push_back(lut_detector::Point(500,500));
 	std::cout<<"px size is: "<<pxes.size()<<std::endl;
 	lut_detector::LineDetector line_detector;
 	std::vector<size_t> rt_rect;
